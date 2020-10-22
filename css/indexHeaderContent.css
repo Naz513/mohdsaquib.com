@@ -1,0 +1,20 @@
+.index-about-section {
+    margin-top: 5%;
+}
+
+.index-about-name {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.index-about-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.index-about-section p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    color: grey;
+}

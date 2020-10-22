@@ -1,0 +1,66 @@
+.LearnMoreProject {
+    display: flex;
+    justify-content: center;
+}
+
+.LearnMoreProject-text h2 {
+    color: #868686;
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+}
+
+.LearnMoreProject-text h3 {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0.50rem;
+    font-weight: 300;
+}
+
+.LearnMoreProject-text h1 {
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0.8rem;
+}
+
+.LearnMoreProject-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: grey;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.LearnMoreProject-text a {
+    font-size: 0.875rem;
+    padding: 0.525rem 0.8rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 0.8;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 0 1.25rem 0;
+    position: relative;
+}
+
+.LearnMoreProject-text a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.LearnMoreProject-img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.LearnMoreProject-img img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -1,0 +1,67 @@
+.cursor {
+    position: relative;
+}
+
+.cursor i {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #FE5186;
+    left: 5px;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+.cursor input:focus+i {
+    display: none;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.footer-header-styles {
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+}
+
+.footer-bottom-styles {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
+
+.footer-bottom-styles a {
+    color: white;
+}
+
+.footer-bottom-styles a:hover {
+    color: inherit !important;
+}
+
+
+ul.footer-links-styles {
+    width: 100%;
+}
+
+ul.footer-links-styles>li {
+    display: inline;
+    font-size: 1.125rem;
+}
+
+.footer-icons {
+    cursor: pointer;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+ul {
+    padding-inline-end: 40px !important;
+}
