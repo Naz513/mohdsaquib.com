@@ -14,7 +14,27 @@
 }
 
 .index-about-section p {
-    font-size: 1.125rem;
-    font-weight: 200;
+    font-size: 1.2rem;
     color: grey;
+    font-weight: 300;
+}
+
+
+.downloadResume a {
+    font-size: 1rem;
+    padding: 0.525rem 0.8rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 0.8;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 0 1.25rem 0;
+    position: relative;
+}
+
+.downloadResume a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black !important;
 }
