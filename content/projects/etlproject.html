@@ -10,11 +10,15 @@
     <title>Mohd Saquib Portfolio</title>
 
     <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- NAVIGATION HEADER STYLE SHEET -->
-    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- INDEX PAGE HEADER STYLE SHEET -->
+    <link rel="stylesheet" href="/css/indexHeaderContent.css">
+    <!-- FEATURED PROJECT STYLE SHEET -->
+    <link rel="stylesheet" href="/css/featuredProject.css">
     <!-- FOOTER STYLE SHEET -->
-    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
 
     <!-- bootstrap cdns -->
@@ -60,9 +64,12 @@
 
             <ul id="menu">
                 <li><a href="../about.html" class="cool-link">about me</a></li>
-                <li><a href="../work.html" class="cool-link">work</a></li>
+                <!-- <li><a href="../work.html" class="cool-link">work</a></li>
                 <li><a href="../projectDetails.html" class="cool-link">projects</a></li>
-                <li><a href="../education.html" class="cool-link">education</a></li>
+                <li><a href="../education.html" class="cool-link">education</a></li> -->
+                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
+                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
+                </li>
             </ul>
 
             <div id="toggle">
@@ -76,11 +83,14 @@
 
             <ul id="menu">
                 <li><a href="../../about.html">about me</a></li>
-                <li><a href="../work.html">work</a></li>
+                <!-- <li><a href="../work.html">work</a></li>
                 <li><a href="../projectDetails.html">projects</a></li>
                 <li><a href="../education.html">education</a></li>
                 <li><a href="../releaseNotes.html">release notes</a></li>
-                <li><a href="../../oldSite/index.html">previous site</a></li>
+                <li><a href="../../oldSite/index.html">previous site</a></li> -->
+                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
+                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
+                </li>
             </ul>
         </div>
         <!--------------- navbar ends here --------------->
@@ -493,7 +503,8 @@
                     > mohdsaquib<span class="cursor"><i></i></span>
                 </p>
                 <p class="text-center footer-bottom-styles">
-                    &copy 2020 <a href="../../index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By <u>AWS</u>
+                    &copy <Date id="demo"> </Date> <a href="../../index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By
+                    <u>AWS</u>
                 </p>
                 <div align="center">
                     <ul class="footer-links-styles">
@@ -531,6 +542,9 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.getFullYear();
     </script>
 </body>
 

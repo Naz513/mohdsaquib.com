@@ -222,7 +222,8 @@
                     > mohdsaquib<span class="cursor"><i></i></span>
                 </p>
                 <p class="text-center footer-bottom-styles">
-                    &copy 2020 <a href="/index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By <u>AWS</u>
+                    &copy <Date id="demo"> </Date> <a href="/index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By
+                    <u>AWS</u>
                 </p>
                 <div align="center">
                     <ul class="footer-links-styles">
@@ -247,6 +248,11 @@
         </div>
         <!--------------- footer ends here --------------->
     </div>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.getFullYear();
+    </script>
 
 </body>
 
