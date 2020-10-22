@@ -1,0 +1,48 @@
+.button-container {
+    padding: 0 20% !important;
+}
+
+.column {
+    float: left;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.button-container .btn {
+    font-size: 0.875rem;
+    padding: 0.525rem 0.8rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 0.8;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 0 1.25rem 0;
+    position: relative;
+    border-radius: 0%;
+}
+
+.button-container .btn:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.btn.active {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.active {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.btn i {
+    font-size: 0.8rem;
+}

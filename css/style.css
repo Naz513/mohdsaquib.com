@@ -688,3 +688,7 @@ div.blog-img-header-box {
 .project-overview {
       color: white !important;
 }
+
+.show {
+      display: block;
+}

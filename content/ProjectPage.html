@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mohdsaquib" content="mohdsaquib">
+
+    <title>Mohd Saquib Portfolio</title>
+
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- NAVIGATION HEADER STYLE SHEET -->
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- INDEX PAGE HEADER STYLE SHEET -->
+    <link rel="stylesheet" href="/css/indexHeaderContent.css">
+    <!-- FEATURED PROJECT STYLE SHEET -->
+    <link rel="stylesheet" href="/css/featuredProject.css">
+    <!-- FOOTER STYLE SHEET -->
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- PROJECT PAGE STYLE SHEET -->
+    <link rel="stylesheet" href="/css/projectPage.css">
+
+
+    <!-- bootstrap cdns -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+        rel="stylesheet">
+
+    <!-- Favicon Tab Icon-->
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon/android-chrome-192x192.png">
+
+    <!-- terminal effect -->
+    <script src="../../js/t.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <script src="../../js/wow.min.js"></script>
+
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/da195f61d9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!--------------- navbar starts here --------------->
+        <nav>
+            <span id="brand">
+                <a href="../../index.html">> mohdsaquib <span class="header-cursor"><i></i></span></a>
+            </span>
+
+            <ul id="menu">
+                <li><a href="/content/about.html" class="cool-link">about me</a></li>
+                <!-- <li><a href="../work.html" class="cool-link">work</a></li> -->
+                <li><a href="/content/ProjectPage.html" class="cool-link">projects</a></li>
+                <!-- <li><a href="../education.html" class="cool-link">education</a></li> -->
+                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
+                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
+                </li>
+            </ul>
+
+            <div id="toggle">
+                <div class="span">menu</div>
+            </div>
+
+        </nav>
+
+        <div id="resize">
+            <div class="close-btn">close</div>
+
+            <ul id="menu">
+                <li><a href="/content/about.html">about me</a></li>
+                <!-- <li><a href="../work.html">work</a></li> -->
+                <li><a href="/content/ProjectPage.html" class="cool-link">projects</a></li>
+                <!-- <li><a href="../education.html">education</a></li>
+                <li><a href="../releaseNotes.html">release notes</a></li>
+                <li><a href="../../oldSite/index.html">previous site</a></li> -->
+                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
+                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!--------------- navbar ends here --------------->
+
+        <div class="whitespace"></div>
+
+        <div class="container-fluid-2">
+            <h1>📚 Projects</h1>
+            <br>
+            <div class="hr"></div>
+            <br><br>
+        </div>
+
+        <!-- MAIN (Center website) -->
+        <div>
+            <div id="buttons" class="button-container">
+                <button class="btn active" onclick="filterSelection('featured')">Featured</button>
+                <button class="btn" onclick="filterSelection('all')">Show
+                    all</button>
+                <button class="btn" onclick="filterSelection('aws')">AWS</button>
+                <button class="btn" onclick="filterSelection('database')">Database</button>
+                <button class="btn" onclick="filterSelection('website')">Website</button>
+                <button class="btn" onclick="filterSelection('cyber')">Cyber</button>
+            </div>
+
+            <br>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column featured aws">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>Sep 27th, 2020</h2>
+                                        <h1>Event-driven COVID-19 Data ETL process</h1>
+                                        <p>Developed an automated serverless daily-run ETL process for COVID-19 Data
+                                            using a
+                                            collection of AWS
+                                            Services as well as a dashboard that consumes the data. Used Python and
+                                            Pandas for Data
+                                            Manipulation and developed entire project using The Serverless
+                                            Framework.</p>
+                                        <a href="/content/projects/etlproject.html">Learn More <i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/ETLProjectAssets/cover.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column featured aws website">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>Aug 28th, 2020</h2>
+                                        <h1>Serverless Resume Website Using Cloudformation</h1>
+                                        <p>Developed a serverless resume website that keeps track of the number of
+                                            visitors accessing the page, using AWS CloudFormation. This project
+                                            incorporates several AWS services such as Lambda Function, DynamoDB, API
+                                            Gateway, and more.</p>
+                                        <a href="/content/projects/resumeproject.html">Learn More <i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="../assets/resumeProjectImages/network.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column database">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>Dec 17th, 2018</h2>
+                                        <h1>Instagram Clone Database</h1>
+                                        <h3>Tech Stack: <b>Database & MySQL</b></h3>
+                                        <p>Created a general clone of Instagram
+                                            schema and inserted thousands of data using SQL on cloud9 Terminal. Used
+                                            joins, sub queries, functions and triggers to analyze and extract the data
+                                            to
+                                            answer critical questions such as finding Instagram bots, pictures with most
+                                            likes, most used hashtags, who unfollowed who, and inactive users, etc.</p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/instagram_project_img.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column website">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>December 17th, 2018</h2>
+                                        <h1>Book Review Website</h1>
+                                        <h3>Tech Stack: <b>HTML, CSS, Bootstrap, basic JavaScript, jQuery, PHP, JSON and
+                                                SQL.</b></h3>
+                                        <p> Created a dynamic website using HTML, CSS, Bootstrap, basic JavaScript,
+                                            jQuery, PHP, JSON and SQL. The website included pages of products, about us,
+                                            and blog pages. PHP and JavaScript were implemented for pages to dynamical
+                                            process together with the website. SQL was used to pull and post data from
+                                            the
+                                            website server for dynamic pages. Designed database tables for the website
+                                            using XAMPP.</p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/sky.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column database">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>July 12th, 2017</h2>
+                                        <h1>US Bank Loan Default Data Mining
+                                            Analysis</h1>
+                                        <h3>Tech Stack: <b>R Programming</b></h3>
+                                        <p>Performed data mining analysis on real data set provided by US Bank using R
+                                            Programming Language. The main objective of this project was to determine
+                                            the
+                                            factors that lead to loan default and whether it can predict if a customer
+                                            will eventually default on their loan. This project required to produce
+                                            several data mining results and analysis. Had to perform several Exploratory
+                                            Data Analysis and Variable Importance Analysis along with a predictive
+                                            modeling.</p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/usbank_project.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column other">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>July 12th, 2017</h2>
+                                        <h1>GMU Training App</h1>
+                                        <h3>Tech Stack: <b>App Development Architect</b></h3>
+                                        <p>The project was about creating a training app for students who seek for part
+                                            time jobs at the university. This project gave the opportunity for a
+                                            hands-on
+                                            experience in all the key phases of the system development life cycle:
+                                            Planning, analysis, design, implementation, and maintenance. However, the
+                                            project didn’t require any programming, but only segments of the systems
+                                            analysis and design. More specifically, the team was required to do the
+                                            planning, analysis and design phase of SDLC. For the implementation and
+                                            maintenance phases, the team was required to develop sample testing plans
+                                            and
+                                            established maintenance plans. For the Design Phase the team had to design
+                                            the
+                                            schema of the app and how each one of the tables were related to one and
+                                            other.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/qa.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column cyber">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>December 17th, 2017</h2>
+                                        <h1>National Cyber Analyst Challenege &
+                                            Conference</h1>
+                                        <h3>Tech Stack: <b>Cyber Analysis</b></h3>
+                                        <p>The National Cyber Analyst Challenge is a joint initiative competition by
+                                            Leidos, NBCUniversal, Vanguard, Pfizer and the Institute for Business and
+                                            Information Technology at Temple University.
+                                            <br>
+                                            Analyzed four computer data with a team of 5 members using tools such as FTK
+                                            manager, memory and network capture software such as Wireshark. Performed
+                                            intensive analytics by comparing data from four PC’s image data of the
+                                            drives
+                                            and reported the differences and abnormalities on each drive.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/cyber_project.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+                <div class="column database">
+                    <div class="container-fluid">
+                        <div class="container-fluid-2">
+                            <div class="row">
+                                <div class="col-md-12 LearnMoreProject">
+                                    <div class="col-md-8 LearnMoreProject-text">
+                                        <h2>December 17th, 2017</h2>
+                                        <h1>Library System</h1>
+                                        <h3>Tech Stack: <b>SQL</b></h3>
+                                        <p> Led a team of four members, where we designed, developed, tested and
+                                            implemented relational databases of a simple library system using SQL. Used
+                                            built in functions and other methods to extract data. Analyzed user needs
+                                            before designing the database. Optimized query performance and populated
+                                            test
+                                            data. Reduced redundancy by normalizing the data.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 LearnMoreProject-img">
+                                        <img src="/assets/library_project.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whitespace"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!--------------- FOOTER starts here --------------->
+        <div>
+            <div class="whitespace"></div>
+
+            <div class="container-fluid-2">
+                <hr class="hr">
+                <div class="whitespace"></div>
+                <p class="text-center  footer-header-styles">
+                    > mohdsaquib<span class="cursor"><i></i></span>
+                </p>
+                <p class="text-center footer-bottom-styles">
+                    &copy <Date id="demo"> </Date> <a href="../../index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By
+                    <u>AWS</u>
+                </p>
+                <div align="center">
+                    <ul class="footer-links-styles">
+                        <li id="fb-icon" class="footer-icons"
+                            onclick="window.open('https://www.facebook.com/nsaquib96', '_banlk')"><i
+                                class="fab fa-facebook"></i></li>
+                        <li id="in-icon" class="footer-icons"
+                            onclick="window.open('https://www.instagram.com/naz_513/', '_banlk')"><i
+                                class="fab fa-instagram"></i></li>
+                        <li id="li-icon" class="footer-icons"
+                            onclick="window.open('https://www.linkedin.com/in/mohdnsaquib/', '_banlk')">
+                            <i class="fab fa-linkedin"></i></li>
+                        <li id="gh-icon" class="footer-icons"
+                            onclick="window.open('https://github.com/Naz513/', '_banlk')">
+                            <i class="fab fa-github"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="whitespace"></div>
+
+        </div>
+        <!--------------- footer ends here --------------->
+
+    </div>
+
+    <script type="text/javascript">
+        $('.carousel').carousel({
+            interval: 3000
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.getFullYear();
+
+        filterSelection("featured")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("buttons");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
