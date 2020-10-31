@@ -303,13 +303,13 @@ h6 {
       margin-top: 1rem;
 }
 
-.about-icons {
+/* .about-icons {
       font-size: 25px;
       margin-top: 1rem;
       margin-left: 8px;
       margin-right: 8px;
       cursor: pointer;
-}
+} */
 
 #fb-icon:hover {
       color: #4267B2;
