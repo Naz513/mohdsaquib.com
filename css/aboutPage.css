@@ -64,3 +64,8 @@
     cursor: pointer;
     color: grey;
 }
+
+.about-title-logos {
+    width: 500px !important;
+    height: 50px;
+}
