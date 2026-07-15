@@ -1,0 +1,201 @@
+.site-footer {
+    --site-footer-bg: #0b0b0c;
+    --site-footer-panel: #111113;
+    --site-footer-text: #f7f4f7;
+    --site-footer-muted: #98949c;
+    --site-footer-line: rgba(255, 255, 255, 0.12);
+    --site-footer-accent: #fe5186;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid var(--site-footer-line);
+    background: var(--site-footer-bg);
+    color: var(--site-footer-text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+    box-sizing: border-box;
+}
+
+.site-footer__shell {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.site-footer__top {
+    display: grid;
+    padding: 76px 0 68px;
+    grid-template-columns: minmax(280px, 1.2fr) minmax(420px, 1fr);
+    gap: clamp(50px, 9vw, 130px);
+}
+
+.site-footer__identity {
+    max-width: 480px;
+}
+
+.site-footer__brand {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: clamp(1.25rem, 3vw, 1.65rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-decoration: none !important;
+}
+
+.site-footer__brand span {
+    display: inline-block;
+    width: 9px;
+    height: 1.25em;
+    margin-left: 7px;
+    background: var(--site-footer-accent);
+    animation: site-footer-blink 1s steps(1, end) infinite;
+}
+
+.site-footer__identity>p {
+    max-width: 440px;
+    margin: 1.4rem 0 1.5rem;
+    color: var(--site-footer-muted);
+    font-size: 0.88rem;
+}
+
+.site-footer__email {
+    display: inline-flex;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--site-footer-accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.site-footer__brand:hover,
+.site-footer__email:hover {
+    color: var(--site-footer-accent);
+}
+
+.site-footer__nav {
+    position: static;
+    display: grid;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 2rem;
+}
+
+.site-footer__nav>div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.site-footer__label {
+    margin: 0 0 1.15rem;
+    color: var(--site-footer-muted);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.site-footer__nav a {
+    display: inline-block;
+    margin: 0 0 0.72rem;
+    color: #d9d6da;
+    font-size: 0.76rem;
+    text-decoration: none !important;
+    transition: color 160ms ease, transform 160ms ease;
+}
+
+.site-footer__nav a:hover {
+    color: var(--site-footer-accent);
+    transform: translateX(3px);
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid var(--site-footer-accent);
+    outline-offset: 4px;
+}
+
+.site-footer__bottom {
+    display: flex;
+    padding: 22px 0 28px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--site-footer-line);
+    color: var(--site-footer-muted);
+    gap: 1.5rem;
+}
+
+.site-footer__bottom p {
+    margin: 0;
+    color: var(--site-footer-muted);
+    font-size: 0.66rem;
+    letter-spacing: 0.02em;
+}
+
+@keyframes site-footer-blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@media (max-width: 850px) {
+    .site-footer__top {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .site-footer__email,
+    .site-footer__nav a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+    }
+
+    .site-footer__nav a {
+        margin-bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-footer__shell {
+        width: min(100% - 32px, 1120px);
+    }
+
+    .site-footer__top {
+        padding: 58px 0 48px;
+    }
+
+    .site-footer__nav {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2.4rem;
+    }
+
+    .site-footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-footer__brand span {
+        animation: none;
+    }
+
+    .site-footer__nav a {
+        transition: none;
+    }
+}

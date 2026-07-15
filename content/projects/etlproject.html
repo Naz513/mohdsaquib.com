@@ -2,552 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="mohdsaquib" content="mohdsaquib">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A case study of Mohd Saquib's event-driven COVID-19 data ETL pipeline built with AWS, Python, Pandas, and the Serverless Framework.">
+      <meta name="theme-color" content="#0f0f0f">
+      <link rel="canonical" href="https://mohdsaquib.com/content/projects/etlproject.html">
+      <meta property="og:type" content="article">
+      <meta property="og:site_name" content="Mohd Saquib">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:title" content="COVID-19 Data ETL Case Study | Mohd Saquib">
+      <meta property="og:description" content="An event-driven AWS pipeline that transforms public health data into a dependable reporting workflow.">
+      <meta property="og:url" content="https://mohdsaquib.com/content/projects/etlproject.html">
+      <meta property="og:image" content="https://mohdsaquib.com/assets/ETLProjectAssets/cover.webp">
+      <meta property="og:image:alt" content="COVID-19 ETL project dashboard and architecture">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="COVID-19 Data ETL Case Study | Mohd Saquib">
+      <meta name="twitter:description" content="An event-driven AWS pipeline that transforms public health data into a dependable reporting workflow.">
+      <meta name="twitter:image" content="https://mohdsaquib.com/assets/ETLProjectAssets/cover.webp">
+      <meta name="twitter:image:alt" content="COVID-19 ETL project dashboard and architecture">
+      <title>COVID-19 Data ETL Case Study | Mohd Saquib</title>
 
-    <title>Mohd Saquib Portfolio</title>
-
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- NAVIGATION HEADER STYLE SHEET -->
-    <link rel="stylesheet" href="/css/header.css">
-    <!-- INDEX PAGE HEADER STYLE SHEET -->
-    <link rel="stylesheet" href="/css/indexHeaderContent.css">
-    <!-- FEATURED PROJECT STYLE SHEET -->
-    <link rel="stylesheet" href="/css/featuredProject.css">
-    <!-- FOOTER STYLE SHEET -->
-    <link rel="stylesheet" href="/css/footer.css">
-    <!-- PROJECT PAGE STYLE SHEET -->
-    <link rel="stylesheet" href="/css/projectPage.css">
-
-
-    <!-- bootstrap cdns -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
-
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
-        rel="stylesheet">
-
-    <!-- Favicon Tab Icon-->
-    <link rel="shortcut icon" type="image/png" href="../../assets/favicon/android-chrome-192x192.png">
-
-    <!-- terminal effect -->
-    <script src="../../js/t.min.js"></script>
-
-    <!-- for on scroll animations -->
-    <link rel="stylesheet" href="../../css/animate.css">
-    <script src="../../js/wow.min.js"></script>
-
-    <!-- Font Awesome-->
-    <script src="https://kit.fontawesome.com/da195f61d9.js" crossorigin="anonymous"></script>
-
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/css/animate.css">
+      <link rel="stylesheet" href="/css/siteNavigation.css?v=20260715-4">
+      <link rel="stylesheet" href="/css/caseStudyPage.css?v=20260715-4">
+      <link rel="stylesheet" href="/css/siteFooter.css?v=20260715-4">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
 </head>
 
-<body>
-    <div class="wrapper">
+<body class="case-page">
+      <main>
+            <header class="case-hero case-hero--etl">
+                  <div class="case-shell wow fadeInUp">
+                        <a class="case-back" href="/content/ProjectPage.html"><span aria-hidden="true">←</span> All projects</a>
+                        <p class="case-eyebrow">AWS data engineering · 2020</p>
+                        <h1>Event-driven COVID-19 data ETL</h1>
+                        <p class="case-lede">
+                              A fully automated serverless pipeline that extracts public health data from two sources,
+                              validates and transforms it, loads it into AWS, and makes it available to a reporting dashboard.
+                        </p>
+                        <div class="case-facts" aria-label="Project summary">
+                              <div><span>Role</span><strong>Designer &amp; developer</strong></div>
+                              <div><span>Focus</span><strong>Serverless data pipeline</strong></div>
+                              <div><span>Delivery</span><strong>Infrastructure as code</strong></div>
+                        </div>
+                  </div>
+            </header>
 
-        <!--------------- navbar starts here --------------->
-        <nav>
-            <span id="brand">
-                <a href="../../index.html">> mohdsaquib <span class="header-cursor"><i></i></span></a>
-            </span>
+            <div class="case-layout case-shell">
+                  <aside class="case-sidebar" aria-label="Case study navigation">
+                        <p>On this page</p>
+                        <nav>
+                              <a href="#overview">Overview</a>
+                              <a href="#architecture">Architecture</a>
+                              <a href="#pipeline">Pipeline</a>
+                              <a href="#reliability">Reliability</a>
+                              <a href="#dashboard">Dashboard</a>
+                              <a href="#lessons">Lessons</a>
+                        </nav>
+                        <div class="case-sidebar__stack">
+                              <p>Core stack</p>
+                              <ul>
+                                    <li>AWS Lambda</li><li>Amazon S3</li><li>DynamoDB</li><li>EventBridge</li>
+                                    <li>AWS Glue</li><li>Athena</li><li>QuickSight</li><li>SNS</li>
+                                    <li>Python</li><li>Pandas</li><li>Serverless Framework</li>
+                              </ul>
+                        </div>
+                  </aside>
 
-            <ul id="menu">
-                <li><a href="/content/about.html" class="cool-link">about me</a></li>
-                <!-- <li><a href="../work.html" class="cool-link">work</a></li> -->
-                <li><a href="/content/ProjectPage.html" class="cool-link">projects</a></li>
-                <!-- <li><a href="../education.html" class="cool-link">education</a></li> -->
-                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
-                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
-                </li>
-            </ul>
+                  <article class="case-content">
+                        <section id="overview" class="case-section">
+                              <p class="case-eyebrow">Overview</p>
+                              <h2>From two public datasets to one dependable daily workflow.</h2>
+                              <p>
+                                    The goal was to combine COVID-19 data from The New York Times and Johns Hopkins,
+                                    clean and reconcile the records, persist the results, and publish them for analysis.
+                                    The entire workload runs without dedicated servers and is scheduled automatically.
+                              </p>
+                              <div class="case-outcomes">
+                                    <div><strong>Daily</strong><span>Scheduled execution through EventBridge</span></div>
+                                    <div><strong>Recoverable</strong><span>State tracking retries previously failed data</span></div>
+                                    <div><strong>Observable</strong><span>SNS reports success, failure, and affected rows</span></div>
+                              </div>
+                        </section>
 
-            <div id="toggle">
-                <div class="span">menu</div>
+                        <section id="architecture" class="case-section">
+                              <p class="case-eyebrow">Architecture</p>
+                              <h2>The design evolved with the implementation.</h2>
+                              <p>
+                                    I started by mapping the expected flow and refined it as testing exposed better ways
+                                    to separate transformation, persistence, recovery, and reporting concerns.
+                              </p>
+                              <figure class="case-figure case-figure--large">
+                                    <img src="/assets/ETLProjectAssets/finalArchitecture.png" width="1233" height="967"
+                                          loading="lazy" decoding="async" alt="Final AWS architecture for the serverless ETL pipeline">
+                                    <figcaption>Final architecture connecting ingestion, processing, storage, recovery, and analytics services.</figcaption>
+                              </figure>
+                              <details class="case-details">
+                                    <summary>View the initial architecture</summary>
+                                    <figure class="case-figure">
+                                          <img src="/assets/ETLProjectAssets/initialArchitecture.png" width="702" height="524"
+                                                loading="lazy" decoding="async" alt="Initial architecture concept for the ETL pipeline">
+                                          <figcaption>The first design used to frame the project before implementation.</figcaption>
+                                    </figure>
+                              </details>
+                        </section>
+
+                        <section id="pipeline" class="case-section">
+                              <p class="case-eyebrow">Pipeline</p>
+                              <h2>Extract, transform, validate, and load.</h2>
+                              <div class="case-steps">
+                                    <article><span>01</span><div><h3>Schedule and extract</h3><p>EventBridge starts the workflow each day at 12:15 UTC. A Python Lambda function downloads both datasets into Pandas dataframes.</p></div></article>
+                                    <article><span>02</span><div><h3>Transform</h3><p>The pipeline converts date fields, joins records by date, filters for US data, and replaces missing numeric values before loading.</p></div></article>
+                                    <article><span>03</span><div><h3>Validate and load</h3><p>Field formats and non-negative values are validated before Boto3 writes the transformed data to DynamoDB without overwriting existing partition keys.</p></div></article>
+                                    <article><span>04</span><div><h3>Publish for analytics</h3><p>Processed data is written to S3, cataloged by AWS Glue, queried through Athena, and consumed by QuickSight.</p></div></article>
+                              </div>
+                        </section>
+
+                        <section id="reliability" class="case-section">
+                              <p class="case-eyebrow">Reliability</p>
+                              <h2>Failures became part of the design.</h2>
+                              <p>
+                                    A separate DynamoDB table records the status of each run. If processing fails, the
+                                    next invocation handles the older data first and then moves to the latest dataset.
+                                    SNS notifications report the status, number of updated rows, and the reason and row
+                                    associated with a failure.
+                              </p>
+                              <div class="case-gallery case-gallery--two">
+                                    <figure class="case-figure">
+                                          <img src="/assets/ETLProjectAssets/email.png" width="2416" height="470"
+                                                loading="lazy" decoding="async" alt="SNS email notification from the ETL process">
+                                          <figcaption>Operational notifications report the result of each run.</figcaption>
+                                    </figure>
+                                    <figure class="case-figure">
+                                          <img src="/assets/ETLProjectAssets/test.png" width="2724" height="356"
+                                                loading="lazy" decoding="async" alt="Python unit tests for the ETL functions">
+                                          <figcaption>Unit tests protect the transformation and loading functions.</figcaption>
+                                    </figure>
+                              </div>
+                              <figure class="case-figure">
+                                    <img src="/assets/ETLProjectAssets/sls.png" width="746" height="322"
+                                          loading="lazy" decoding="async" alt="Serverless Framework configuration for the ETL infrastructure">
+                                    <figcaption>The Serverless Framework packages dependencies and defines repeatable AWS infrastructure.</figcaption>
+                              </figure>
+                        </section>
+
+                        <section id="dashboard" class="case-section">
+                              <p class="case-eyebrow">Dashboard</p>
+                              <h2>Making the processed data useful.</h2>
+                              <p>
+                                    QuickSight could not consume DynamoDB directly, so the reporting path was redesigned.
+                                    The load process also writes processed records to S3; Glue catalogs them, Athena makes
+                                    them queryable, and QuickSight turns the result into a dashboard.
+                              </p>
+                              <figure class="case-figure case-figure--large">
+                                    <img src="/assets/ETLProjectAssets/Dashboard.png" width="2540" height="1209"
+                                          loading="lazy" decoding="async" alt="QuickSight dashboard presenting the processed COVID-19 data">
+                                    <figcaption>The final QuickSight dashboard built from the Athena dataset.</figcaption>
+                              </figure>
+                        </section>
+
+                        <section id="lessons" class="case-section case-lessons">
+                              <p class="case-eyebrow">Lessons</p>
+                              <h2>What this project reinforced.</h2>
+                              <ul>
+                                    <li>Designing failure recovery early makes scheduled workloads easier to trust.</li>
+                                    <li>Keeping transformation logic independent from storage makes it easier to reuse and test.</li>
+                                    <li>Analytics requirements can reshape the storage path, so consumers should influence architecture decisions.</li>
+                                    <li>Infrastructure as code makes a multi-service build repeatable and easier to evolve.</li>
+                              </ul>
+                        </section>
+                  </article>
             </div>
 
-        </nav>
+            <section class="case-next">
+                  <div class="case-shell">
+                        <p class="case-eyebrow">Next case study</p>
+                        <a href="/content/projects/resumeproject.html">
+                              <span>Serverless résumé with CloudFormation</span><strong aria-hidden="true">→</strong>
+                        </a>
+                  </div>
+            </section>
+      </main>
 
-        <div id="resize">
-            <div class="close-btn">close</div>
-
-            <ul id="menu">
-                <li><a href="/content/about.html">about me</a></li>
-                <!-- <li><a href="../work.html">work</a></li> -->
-                <li><a href="/content/ProjectPage.html" class="cool-link">projects</a></li>
-                <!-- <li><a href="../education.html">education</a></li>
-                <li><a href="../releaseNotes.html">release notes</a></li>
-                <li><a href="../../oldSite/index.html">previous site</a></li> -->
-                <li class="downloadResume"><a href="/assets/Downloads/Mohd_Saquib_Resume_GeorgeMasonUniversity.pdf"
-                        target="_blank">Resume <i class="far fa-arrow-alt-circle-down"></i></a>
-                </li>
-            </ul>
-        </div>
-        <!--------------- navbar ends here --------------->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <br><br>
-                    <div class="blog-img-header-box">
-                        <img class="img-fluid rounded" src="../../assets/ETLProjectAssets/cover.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <br>
-        <br>
-        <div class="container">
-            <div class="hero-content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <br>
-                        <h1 class="wow fadeInUp" data-wow-delay="1s">Event-driven Covid-19 ETL Project
-                        </h1>
-                        <br>
-                        <div class="hr">
-                            <div class="row"></div>
-                        </div>
-                        <br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-1">
-                                    <img class="about-image wow fadeInUp" src="../../assets/profile.png" alt=""
-                                        data-wow-delay="1s" style="height: 100px;width: 100px;" align="left">
-                                </div>
-                                <div class="col-lg-11">
-                                    <div class="blog-by">
-                                        <h4>Mohd Saquib <i class="fas fa-check-circle"></i></h4>
-                                        <p>Published on <bold>Aug 28, 2020</bold>
-                                        </p>
-                                        <p><a class="bolg-by-header-link"
-                                                href="https://www.linkedin.com/in/mohdnsaquib/" target="_blank"><i
-                                                    class="fab fa-linkedin"></i></a> <a class="bolg-by-header-link"
-                                                href="https://github.com/Naz513" target="_blank"><i
-                                                    class="fab fa-github"></i></a>
-                                            <span style="color: #0f0f0f;">_</span>
-                                            <bold><i class="far fa-clock"></i> 5 min read</bold>
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hr">
-                            <div class="row"></div>
-                        </div>
-                        <br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 reacts views-logo"><i class="fas fa-eye"></i> <span
-                                        id="visits">0</span></div>
-                                <div class="col-md-4 reacts likes-logo" data-toggle="tooltip" data-placement="left"
-                                    title="Click to Like" type="button" id="likesButton"><i class="far fa-heart"></i>
-                                    <span id="likes">0</span>
-                                </div>
-                                <div class="col-md-4 reacts shared-logo hovicon sub-a" data-toggle="tooltip"
-                                    data-placement="left" title="Click to Share" type="button" id="shareButton"><i
-                                        class="fas fa-retweet"></i>
-                                    <span id="shares">0</span>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-
-                        <p class="blog-para-content"><i>GitHub Repository: </i> <a
-                                href="https://github.com/Naz513/mohdsaquib.com" target="_blank">ETL Covid-19 Project</a>
-                        </p>
-                        <br>
-                        <br>
-                        <h3>👋 Hello,</h3>
-                        <br>
-                        <p class="blog-para-content">
-                            Ever since I got my AWS SAA certificates, I have been eager to challenge myself with
-                            real-life projects. A few weeks ago, I stumbled upon a challenge hosted by a cloud guru ,
-                            and I did not wait for a second and jumped right in. It has been quite a lot of fun learning
-                            and doing the project for the last few weeks, and I am excited to share it.
-                        </p>
-                        <p class="blog-para-content">
-                            This project aimed to develop an ETL processing pipeline for COVID-19 data attained from the
-                            New York Times and John Hopkins sources, using Python and various AWS cloud services. This
-                            project incorporated the following AWS services:
-                            <ol>
-                                <li class="blog-para-content">S3 Bucket</li>
-                                <li class="blog-para-content">Glue Crawler</li>
-                                <li class="blog-para-content">Glue Database</li>
-                                <li class="blog-para-content">IAM Roles</li>
-                                <li class="blog-para-content">DynamoDB</li>
-                                <li class="blog-para-content">EventBridge</li>
-                                <li class="blog-para-content">Lambda</li>
-                                <li class="blog-para-content">Cloudwatch</li>
-                                <li class="blog-para-content">SNS</li>
-                            </ol>
-                        </p>
-                        <p class="blog-para-content">
-                            The following Tech Stacks were also used to develop this project:
-                        </p>
-                        <ol>
-                            <li class="blog-para-content">Python</li>
-                            <li class="blog-para-content">Pandas</li>
-                            <li class="blog-para-content">AWS</li>
-                            <li class="blog-para-content">The Serverless Framework</li>
-                            <li class="blog-para-content">Github</li>
-                        </ol>
-                        <p class="blog-para-content">
-                            To begin this project, I first visualized all the designs, so I have a clear idea of
-                            approaching it. Below is my first mockup of the project. And following that is my final
-                            Infrastructure Architecture.
-                        </p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <br>
-                                    <h5>Initial Infrastructure Architecture</h5>
-                                    <br><br>
-                                    <div class="blog-img-box">
-                                        <img class="img-fluid center-block rounded"
-                                            src="../../assets/ETLProjectAssets/initialArchitecture.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br><br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <br>
-                                    <h5>Final Infrastructure Architecture</h5>
-                                    <br><br>
-                                    <div class="blog-img-box">
-                                        <img class="img-fluid center-block rounded"
-                                            src="../../assets/ETLProjectAssets/finalArchitecture.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br><br>
-                        <strong class="blog-para-header">ETL Job</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">One of this project's main tasks was to automate it to
-                                    run daily to fetch the latest data. I used Amazon EventBridge
-                                    (Previously known
-                                    as Cloudwatch Events Rule) to set up my cron job daily at 12:15 UTC. It
-                                    was a
-                                    simple task and was reasonably quick; however, I did not implement this
-                                    feature
-                                    until I had most of my lambda functions ready later in the process.</li>
-                            </ul>
-                        </p>
-                        <br>
-                        <strong class="blog-para-header">Extraction</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    The next step of the project was to write a lambda code in Python, which would
-                                    download both New York Times and John Hopkins data and save it in memory. This was
-                                    relatively simple to implement. I used Pandas to take care of this and kept data in
-                                    a data frame.
-                                </li>
-                            </ul>
-                        </p>
-
-
-                        <strong class="blog-para-header">Transformation</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    In this step, I had to perform some data manipulations on the data downloaded
-                                    from the sources mentioned above. First, I had to convert the date fields of
-                                    both them to a Date object and not a string. Then combined both of the datasets
-                                    by doing an inner join on the date using pandas. And finally, filtering all the
-                                    non-US data from the John Hopkins dataset.
-
-                                </li>
-                                <li class="blog-para-content">
-                                    While I was working through this step of the code, I found several instances where
-                                    there were “NaN” data. To resolve this issue, I used another Pandas method,
-                                    fillna(), and replaced it with a “0”.
-                                </li>
-                                <li class="blog-para-content">
-                                    At first, I designed my project so that after it has downloaded the data, it would
-                                    save it to an S3 bucket, and then an S3 event would trigger the transformation
-                                    function. This was a tedious workflow and didn’t quite work well. However, as I
-                                    progressed through the project, another step stated that the transformation code
-                                    should not know where the code is stored, or it should know anything about databases
-                                    and that it should be included as a python module. I made this entire task into its
-                                    module and called it in my index python code. This made it reusable by other
-                                    sections of the project.
-                                </li>
-                            </ul>
-                        </p>
-
-                        <strong class="blog-para-header">Load</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    The next step of the project was to save the data somewhere. I decided to use
-                                    DynamoDB as it’s a robust and super-fast NoSQL database. I used Boto3 to read,
-                                    write, and update the transformed data into my database. I also implemented a
-                                    mechanism to restrict itself from overwriting data based on the partition key if it
-                                    already exists.
-                                </li>
-                                <li class="blog-para-content">
-                                    I also implemented several errors handling mechanisms in this module. First, I
-                                    verified if the date field is appropriately formatted and then confirmed if other
-                                    fields are Integers and have values greater than or equal to 0, meaning there
-                                    shouldn’t be any data with empty fields. If, for some reason, the code detects an
-                                    error while running, the process will end and save the data in an S3 bucket.
-                                </li>
-                                <li class="blog-para-content">
-                                    I implemented SNS to notify me if the process failed or passed. If it passed, it
-                                    would tell me exactly how many rows were updated on a given day. If the operation
-                                    failed, it would notify that the process failed and the row of that data where it
-                                    failed and why.
-
-                                </li>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <br><br>
-                                            <div class="blog-img-box">
-                                                <img class="img-fluid rounded"
-                                                    src="../../assets/ETLProjectAssets/email.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <li class="blog-para-content">
-                                    One of the main steps of this task was that if the code failed at any point, it
-                                    should remember that it failed. And to take on this, I deployed another DynamoDB
-                                    table that would solely keep track of the process. So, if my code for any reason
-                                    fails midway, it would set the field in to “Failed = True.” And on the next run, my
-                                    code would read this database to see my previous process's status. If the code
-                                    failed previously, then the function would process the old data first, and after it
-                                    has successfully loaded the data in, it would go ahead and process the latest data.
-                                    If the previous process successfully went through, my lambda function would only
-                                    process the latest data.
-                                </li>
-                            </ul>
-                        </p>
-
-                        <strong class="blog-para-header">Tests</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    To ensure the code could handle unexpected situations, I wrote a couple of tests
-                                    using Python’s built-in test module, unittest. I have never written any tests
-                                    before, so it was new to me. I spent a couple of hours learning and writing tests.
-                                    It was pretty simple to implement. This helped me identify if any problems occurred
-                                    to my main functions after updating them. I also added some of my custom data to
-                                    test my primary functions.
-                                </li>
-                                <div class=" container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <br><br>
-                                            <div class="blog-img-box">
-                                                <img class="img-fluid rounded"
-                                                    src="../../assets/ETLProjectAssets/test.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </p>
-
-                        <strong class="blog-para-header">Infrastructure as Code (IaC)</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    As you can see, the entire project is serverless and did not require any servers to
-                                    run any of the processes. I used The Serverless Framework to write my infrastructure
-                                    out. Why did I use The serverless Framework? Its because it is getting viral as the
-                                    cloud industry is growing. It also emphasizes on serverless architecture and is
-                                    super duper SIMPLE to use. Another reason was that it helped me package all of my
-                                    python dependencies with a simple command. Not only that, but the serverless
-                                    framework also allows other third-party dependencies that can be used in your
-                                    serverless.yml. It is pretty much similar to writing CloudFormation templates with
-                                    extra benefits. Another big reason why I chose this was that you could deploy your
-                                    entire infrastructure with a simple command and delete it with another simple
-                                    command.
-
-                                </li>
-                                <div class=" container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <br><br>
-                                            <div class="blog-img-box">
-                                                <img class="img-fluid rounded"
-                                                    src="../../assets/ETLProjectAssets/sls.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </p>
-
-                        <strong class="blog-para-header">Dashboard</strong>
-                        <p>
-                            <ul>
-                                <li class="blog-para-content">
-                                    Oh, Boy! Where do I even start? Initially, I thought this would be the easiest step
-                                    for this entire project. However, it did not turn that way. Initially, I planned to
-                                    use AWS QuickSight to display my data in a dashboard, however mid-way through the
-                                    project, I found out that DynamoDB isn’t supported with QuickSight yet. Bummer! I
-                                    had to find another way to deploy my dashboard, so I then thought about using
-                                    Tableau Public. However, there is no support for AWS to connect with Tableau Public
-                                    version, its only available for the professional version, so that was out of the
-                                    question. I did more research and found out that QuickSight works excellently with
-                                    Amazon Athena. I had to restructure my code a little bit for this work. First, I
-                                    changed my load function to save my data after being loaded to a Processed S3
-                                    folder. After that, I implemented AWS Glue Crawler, which would pull in the S3
-                                    Bucket data and put it inside the AWS Glue Database. Then from there, it was pretty
-                                    straight forward; the data would automatically populate over to Athena. And in
-                                    QuickSight, it was simple as clicking import data from Athena. Below is a static
-                                    image of QuickSight Dashboard.
-                                </li>
-                                <div class=" container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <br><br>
-                                            <div class="blog-img-box">
-                                                <img class="img-fluid rounded"
-                                                    src="../../assets/ETLProjectAssets/Dashboard.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </p>
-
-                        <p class=" blog-para-content">Working on this project was fun and made me learn tons of new
-                            things. I cannot wait to tackle more challenges in the future from A Cloud Guru. I am
-                            also in love with The Serverless Framework; it is easy and intuitive to develop any
-                            cloud infrastructure. I recommend anyone interested in the cloud to take on this
-                            project. Not only will this project help you understand several AWS services, but it
-                            also enhances your Python skills.
-                        </p>
-
-                        <br>
-                        <br>
-                        <h6>Programming Languages :</h6>
-                        <p>
-                            <button class="about-skills-tag">Python</button>
-                            <button class="about-skills-tag">YAML</button>
-                        </p>
-                        <br>
-                        <br>
-
-                        <h6>Tags:</h6>
-                        <p>
-                            <button class="about-skills-tag">AWS</button>
-                            <button class="about-skills-tag">DynamoDB</button>
-                            <button class="about-skills-tag">Lambda</button>
-                            <button class="about-skills-tag">The Serverless Framework</button>
-                            <button class="about-skills-tag">S3</button>
-                            <button class="about-skills-tag">QuickSight</button>
-                            <button class="about-skills-tag">AWS Glue</button>
-                            <button class="about-skills-tag">Crawler</button>
-                            <button class="about-skills-tag">Athena</button>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--------------- hero section ends here --------------->
-
-
-
-
-        <div class="whitespace"></div>
-
-        <div class="whitespace"></div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 align="center">Read Next 📖</h3>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-
-        <div class="whitespace"></div>
-
-        <!--------------- FOOTER starts here --------------->
-        <div>
-            <div class="whitespace"></div>
-
-            <div class="container-fluid-2">
-                <hr class="hr">
-                <div class="whitespace"></div>
-                <p class="text-center  footer-header-styles">
-                    > mohdsaquib<span class="cursor"><i></i></span>
-                </p>
-                <p class="text-center footer-bottom-styles">
-                    &copy <Date id="demo"> </Date> <a href="../../index.html"><u>mohdsaquib.com</u></a> ❤️ | Powered By
-                    <u>AWS</u>
-                </p>
-                <div align="center">
-                    <ul class="footer-links-styles">
-                        <li id="fb-icon" class="footer-icons"
-                            onclick="window.open('https://www.facebook.com/nsaquib96', '_banlk')"><i
-                                class="fab fa-facebook"></i></li>
-                        <li id="in-icon" class="footer-icons"
-                            onclick="window.open('https://www.instagram.com/naz_513/', '_banlk')"><i
-                                class="fab fa-instagram"></i></li>
-                        <li id="li-icon" class="footer-icons"
-                            onclick="window.open('https://www.linkedin.com/in/mohdnsaquib/', '_banlk')">
-                            <i class="fab fa-linkedin"></i></li>
-                        <li id="gh-icon" class="footer-icons"
-                            onclick="window.open('https://github.com/Naz513/', '_banlk')">
-                            <i class="fab fa-github"></i></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="whitespace"></div>
-
-        </div>
-        <!--------------- footer ends here --------------->
-
-    </div>
-
-    <!-- <script src="../../backend/API/blogApiFetch.js"></script>
-    <script src="../../backend/shareFunction.js"></script> -->
-
-    <script type="text/javascript">
-        $('.carousel').carousel({
-            interval: 3000
-        });
-
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-
-        var d = new Date();
-        document.getElementById("demo").innerHTML = d.getFullYear();
-    </script>
+      <script src="/js/wow.min.js"></script>
+      <script>if (typeof WOW === 'function' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) new WOW().init();</script>
+      <script src="/js/site-navigation.js?v=20260715-4"></script>
+      <script src="/js/site-footer.js?v=20260715-4"></script>
 </body>
 
 </html>

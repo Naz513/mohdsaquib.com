@@ -1,0 +1,46 @@
+# Operating-system metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python and local-server caches
+__pycache__/
+*.py[cod]
+.python-version
+.venv/
+venv/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+
+# Logs, caches, and generated output
+*.log
+.cache/
+.tmp/
+tmp/
+build/
+dist/
+node_modules/
+
+# Generated AWS and infrastructure state
+.aws-sam/
+cdk.out/
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

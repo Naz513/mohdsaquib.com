@@ -1,0 +1,11 @@
+# Add these entries under AWS::CloudFront::Distribution.DistributionConfig.
+# S3 origins can return either 403 or 404 for a missing object.
+CustomErrorResponses:
+  - ErrorCode: 403
+    ErrorCachingMinTTL: 300
+    ResponseCode: 404
+    ResponsePagePath: /404.html
+  - ErrorCode: 404
+    ErrorCachingMinTTL: 300
+    ResponseCode: 404
+    ResponsePagePath: /404.html
